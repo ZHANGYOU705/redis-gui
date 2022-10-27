@@ -1,0 +1,23 @@
+server:
+  port: 9001
+
+# 日志打印位置
+logging:
+  file:
+    path: /data/logs/
+    name: redis-gui.log
+spring:
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:~/redis-gui;AUTO_SERVER=TRUE
+    username: sa
+    password:
+  jpa:
+    database: h2
+    show-sql: true
+    hibernate:
+      ddl-auto: update
